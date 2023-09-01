@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  width: 514px;
+
+  padding: 10px;
+
+  margin: auto;
+
+  perspective: 1000px;
+
+  border: 1px solid blue;
+}
+
+.card {
+  position: relative;
+
+  width: 90px;
+  height: 125px;
+
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+}
+
+.front {
+  background-color: tomato;
+}
+
+.back{
+  background-color: blue;
+	transform: rotateY(180deg);
+}
+
+.front, .back{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+
+
+main:hover .card {
+  /* transform: rotateY(180deg); */
+}
