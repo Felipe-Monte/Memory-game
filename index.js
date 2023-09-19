@@ -1,4 +1,4 @@
-const container = document.querySelector('main')
+const container = document.querySelector('main');
 
 function createCard() {
   return `
@@ -6,16 +6,23 @@ function createCard() {
       <div class="front"></div>
       <div class="back"></div>
     </div>
-  `
+  `;
 }
 
-container.innerHTML += createCard() + createCard() + createCard() + createCard() + createCard() + createCard() + createCard() + createCard() 
-+ createCard() 
+let numberOfCards = 23;
 
-const allCards = document.querySelectorAll('.card')
+for (let i = 0; i < numberOfCards; i++) {
+  container.innerHTML += createCard();
+}
+
+const allCards = document.querySelectorAll('.card');
 
 allCards.forEach(card => {
   card.addEventListener("click", () => {
-    card.style.transform = 'rotateY(180deg)'
-  })
-})
+    if (card.classList.contains('flipped')) {
+      card.classList.remove('flipped');
+    } else {
+      card.classList.add('flipped');
+    }
+  });
+});

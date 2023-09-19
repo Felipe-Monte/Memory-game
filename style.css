@@ -14,7 +14,7 @@ main {
   flex-wrap: wrap;
   gap: 10px;
 
-  width: 514px;
+  width: 553px;
 
   padding: 10px;
 
@@ -23,15 +23,16 @@ main {
   perspective: 1000px;
 
   border: 1px solid blue;
+  border-radius: 10px;
 }
 
 .card {
   position: relative;
 
-  width: 90px;
-  height: 125px;
+  width: 80px;
+  height: 80px;
 
-  transition: transform 0.8s;
+  transition: transform 0.5s;
   transform-style: preserve-3d;
 }
 
@@ -43,12 +44,14 @@ main {
 }
 
 .front {
-  background-color: tomato;
+  background-color: rgb(169, 162, 176);
+  border-radius: 10px;
 }
 
 .back{
-  background-color: blue;
+  background-color: rgb(59, 59, 184);
 	transform: rotateY(180deg);
+  border-radius: 10px;
 }
 
 .front, .back{
@@ -59,7 +62,6 @@ main {
 }
 
 
-
-main:hover .card {
-  /* transform: rotateY(180deg); */
+.card.flipped {
+  transform: rotateY(180deg);
 }
