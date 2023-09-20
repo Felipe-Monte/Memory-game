@@ -1,19 +1,29 @@
 const container = document.querySelector('main');
 
+const teams = ["icon-corinthians", "icon-airbrush", "icon-dailymotion", "icon-photoscape", "icon-vite"]
+
+
 function createCard() {
-  return `
+  let cardHTML = ""
+
+  for (let i = 0; i < teams.length; i++) {
+    cardHTML += `
     <div class="card">
       <div class="front"></div>
-      <div class="back"></div>
+      <div class="back">
+        <img src="assets/${teams[i]}.svg" alt="logo do time">
+      </div>
     </div>
-  `;
+    `
+  }
+
+  return cardHTML
 }
 
-let numberOfCards = 23;
+container.innerHTML += createCard() + createCard()
 
-for (let i = 0; i < numberOfCards; i++) {
-  container.innerHTML += createCard();
-}
+
+
 
 const allCards = document.querySelectorAll('.card');
 
