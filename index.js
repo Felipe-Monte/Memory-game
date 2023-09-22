@@ -27,8 +27,7 @@ container.innerHTML += createCard()
 
 
 
-let firstCard = ""
-let secondCard = ""
+
 
 const allCards = document.querySelectorAll('.card');
 
@@ -40,10 +39,17 @@ const hideCard = (card) => {
   card.classList.remove("flipped")
 }
 
+let firstCard = ""
+let secondCard = ""
+
 allCards.forEach(card => {
   card.addEventListener("click", () => {
-    revelCard(card)
-
+    
+    if(firstCard === ""){
+      revelCard(card)
+      firstCard = card
+    }
+    
     if (card.classList.contains("flipped")) {
       return
     } else {
