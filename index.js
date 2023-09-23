@@ -1,4 +1,5 @@
 const container = document.querySelector('main');
+const allCards = document.querySelectorAll('.card');
 
 const teams = ["icon-corinthians", "icon-airbrush", "icon-dailymotion", "icon-photoscape", "icon-vite"]
 
@@ -24,12 +25,6 @@ const createCard = () => {
 }
 
 container.innerHTML += createCard()
-
-
-
-
-
-const allCards = document.querySelectorAll('.card');
 
 const revelCard = (card) => {
   card.classList.add("flipped")
@@ -70,10 +65,8 @@ const checkCards = () => {
       firstCard = ""
       secondCard = ""
 
-    }, 500);
+    }, 500)
   }
-
-
 }
 
 allCards.forEach(card => {
@@ -93,7 +86,5 @@ allCards.forEach(card => {
 
       checkCards()
     }
-
-
   });
 });
