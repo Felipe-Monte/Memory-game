@@ -1,5 +1,4 @@
 const container = document.querySelector('main');
-const allCards = document.querySelectorAll('.card');
 
 const teams = ["icon-corinthians", "icon-airbrush", "icon-dailymotion", "icon-photoscape", "icon-vite"]
 
@@ -15,9 +14,9 @@ const createCard = () => {
     <div class="card" data-name=${teamsSorted[i]}>
       <div class="front"></div>
       <div class="back">
-        <img src="assets/${teamsSorted[i]}.svg" alt="logo do time">
+      <img src="assets/${teamsSorted[i]}.svg" alt="logo do time">
       </div>
-    </div>
+      </div>
     `
   }
 
@@ -25,6 +24,8 @@ const createCard = () => {
 }
 
 container.innerHTML += createCard()
+
+const allCards = document.querySelectorAll('.card');
 
 const revelCard = (card) => {
   card.classList.add("flipped")
