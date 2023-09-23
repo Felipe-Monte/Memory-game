@@ -1,6 +1,7 @@
 const container = document.querySelector('main');
 
-const teams = ["icon-corinthians", "icon-airbrush", "icon-dailymotion", "icon-photoscape", "icon-vite"]
+
+const teams = ["corinthians", "flamengo", "palmeiras", "sao-paulo"]
 
 const teamsMultiplied = [...teams, ...teams]
 
