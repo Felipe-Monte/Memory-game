@@ -42,18 +42,56 @@ const hideCard = (card) => {
 let firstCard = ""
 let secondCard = ""
 
+const checkEndGame = () => {
+  const disabledCards = document.querySelectorAll(".flipped")
+
+  if (disabledCards.length === 10) {
+    alert("Parabéns você acertou todos!")
+  }
+}
+
+const checkCards = () => {
+  const firstCharacter = firstCard.getAttribute("data-name")
+  const secondCharacter = secondCard.getAttribute("data-name")
+
+  if (firstCharacter === secondCharacter) {
+
+    firstCard = ""
+    secondCard = ""
+
+    checkEndGame()
+
+  } else {
+    setTimeout(() => {
+
+      firstCard.classList.remove("flipped")
+      secondCard.classList.remove("flipped")
+
+      firstCard = ""
+      secondCard = ""
+
+    }, 500);
+  }
+
+
+}
+
 allCards.forEach(card => {
   card.addEventListener("click", () => {
-    
-    if(firstCard === ""){
-      revelCard(card)
-      firstCard = card
-    }
-    
+
     if (card.classList.contains("flipped")) {
       return
-    } else {
-      hideCard(card)
+    }
+
+    if (firstCard === "") {
+      revelCard(card)
+      firstCard = card
+
+    } else if (secondCard === "") {
+      revelCard(card)
+      secondCard = card
+
+      checkCards()
     }
 
 
