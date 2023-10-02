@@ -9,6 +9,8 @@ body {
   width: 100vh;
   height: 100vh;
 
+  margin: auto;
+  
   text-align: center;
   font-family: 'Roboto Mono', monospace;
 }
