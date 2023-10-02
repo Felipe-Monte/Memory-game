@@ -42,7 +42,7 @@ let secondCard = ""
 const checkEndGame = () => {
   const disabledCards = document.querySelectorAll(".flipped")
 
-  if (disabledCards.length === 10) {
+  if (disabledCards.length === 8) {
     alert("Parabéns você acertou todos!")
   }
 }
