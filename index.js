@@ -1,7 +1,7 @@
 const container = document.querySelector('main');
 
 
-const teams = ["corinthians", "flamengo", "palmeiras", "sao-paulo"]
+const teams = ["bahia", "botafogo", "bragantino", "corinthians", "flamengo", "fluminense", "gremio", "palmeiras", "santos", "sao-paulo"]
 
 const teamsMultiplied = [...teams, ...teams]
 
@@ -42,7 +42,7 @@ let secondCard = ""
 const checkEndGame = () => {
   const disabledCards = document.querySelectorAll(".flipped")
 
-  if (disabledCards.length === 8) {
+  if (disabledCards.length === 20) {
     alert("Parabéns você acertou todos!")
   }
 }

@@ -41,7 +41,7 @@ main {
   height: 100%;
 
   padding: 10px;
-  
+
   background-size: cover;
 }
 
@@ -50,13 +50,14 @@ main {
   border-radius: 10px;
 }
 
-.back{
-  background-color: rgb(59, 59, 184);
-	transform: rotateY(180deg);
+.back {
+  background-color: rgba(45, 45, 203, 0.878);
+  transform: rotateY(180deg);
   border-radius: 10px;
 }
 
-.front, .back{
+.front,
+.back {
   width: 100%;
   height: 100%;
   position: absolute;
